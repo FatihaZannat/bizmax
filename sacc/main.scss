@@ -51,9 +51,8 @@ body {
 
 nav {
     background: $nav-color;
-
-    // padding: 40px 0;
     position: sticky;
+    top: 0;
 
     .nav-section {
         display: flex;
