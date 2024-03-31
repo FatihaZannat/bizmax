@@ -14,6 +14,12 @@ body {
 .bg-img {
     background-image: url('../image/Slider--1.png');
     background-repeat: no-repeat;
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .container {
