@@ -267,6 +267,18 @@ nav {
 
 .running-section {
     background-image: url('../image/header-bg-1\ 1.png');
-
     height: 200px;
+    display: flex;
+    align-items: center;
+.your-class{
+    text-align: center;
+   
+    color: $light-color;
+    font-size: 30px;
+
+    span{
+         padding: 0 30px;
+    }
+}
+
 }
