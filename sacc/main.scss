@@ -12,11 +12,8 @@ body {
 }
 
 .bg-img {
-
     background-image: url('../image/Slider--1.png');
     background-repeat: no-repeat;
-
-
 }
 
 .container {
@@ -48,11 +45,13 @@ body {
 
 nav {
     background: $nav-color;
-    padding: 40px 0;
+
+    // padding: 40px 0;
     position: sticky;
 
     .nav-section {
         display: flex;
+        height: 95px;
         justify-content: space-between;
         align-items: center;
 
@@ -64,31 +63,70 @@ nav {
                 display: flex;
                 align-items: center;
 
-                .menu-item-has-children a::after {
-                    content: "+";
-                    // font-family: "Font Awesome 6 Free";
-                    margin: 5px;
-                    font-weight: map-get($font-weights, 'bold' );
-                  
-                }
 
-                li {
-     padding-left: 60px;
+                li.main-li {
+                    padding-left: 60px;
+                    position: relative;
+
                     a {
                         text-decoration: none;
-                       
                         color: $light-color;
-                        &:hover{
+                        padding-bottom: 20px;
+
+                        &:hover {
                             color: $primary-color;
-                            // padding-left: 60px ;
-                            // padding: 60px;
-                            
+
                         }
                     }
 
                 }
+
+                .menu-item-has-children>a::after {
+                    content: "+";
+                    // font-family: "Font Awesome 6 Free";
+                    margin: 5px;
+                    font-weight: map-get($font-weights, 'bold');
+
+                }
             }
 
+            // dropdown menu section
+            .menu-item-has-children {
+                position: relative;
+
+            }
+
+            .menu-item-has-children ul.dropdown {
+                position: absolute;
+                top: 34px;
+                display: flex;
+                flex-direction: column;
+                background: rgb(33, 32, 32);
+                padding: 10px 20px;
+                width: 180px;
+                display: none;
+                border-radius: 5px;
+            }
+
+            .menu-item-has-children ul li {
+
+                margin: 5px;
+            }
+
+            .menu-item-has-children ul li a {
+                font-size: 14px;
+                display: block;
+                width: 130px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid $ashas-color;
+            }
+
+            .menu-item-has-children:hover ul.dropdown {
+                display: block;
+            }
+
+
+            // end dropdown menu
 
             .logo a {
                 color: $light-color;
@@ -144,11 +182,11 @@ nav {
             display: flex;
             flex-direction: column;
             margin-top: 50px;
-          
+
 
             a {
                 transition: all .5s ease;
-               padding: 5px;
+                padding: 5px;
                 border-radius: 50%;
                 margin: 5px 0;
             }
@@ -175,6 +213,7 @@ nav {
                 margin-bottom: 15px;
             }
 
+            // slider button
             button {
                 @include primary-btn;
                 margin-top: 15px;
@@ -186,6 +225,25 @@ nav {
 
                 img {
                     margin-left: 10px;
+                }
+            }
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            margin-left: 220px;
+
+            button {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: none;
+
+                &:hover {
+                    background-color: $primary-color;
                 }
             }
         }
