@@ -148,7 +148,36 @@ nav {
             justify-content: space-between;
             align-items: center;
             color: $light-color;
+            .search{
+                position: relative;
+                .search-details{
+                    // width: 350px;
+                    // height: 100px;
+                    background: $light-color;
+                    position: absolute;
+                    top: 30px;
+                    right: 0px;
+                    display: none;
+                    border-radius: 5px;
+                    img{
+                        position: absolute;
+                        top: 35px;
+                        right: 35px;
+                    }
+                    input{
+                        background: rgba(243, 243, 243, 1);
+                        width: 314px;
+                        height: 60px;
+                        margin: 20px;
+                        border-radius: 5px;
+                        padding-left: 20px;
+                    &::after{
+                            content: url('../image/Search.svg');
+                        }
+                    }
+                }
 
+            }
             .number {
                 display: flex;
                 justify-content: space-between;
@@ -272,7 +301,6 @@ nav {
     align-items: center;
 .your-class{
     text-align: center;
-   
     color: $light-color;
     font-size: 30px;
 
