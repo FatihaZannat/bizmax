@@ -1,0 +1,6 @@
+
+@for $i from 10 through 60 {
+    .cs_fs_#{$i}{
+        font-size: $i + px;
+    }
+}

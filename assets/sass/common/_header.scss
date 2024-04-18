@@ -1,0 +1,21 @@
+.cs_site_header{
+
+}
+.cs_top_header{
+    background-color: #18191D;
+}
+.cs_top_header_in {
+   height: 45px;
+   
+  }
+  .cs_top_nav{
+   li{
+    &:not(:last-child){
+        &::after{
+            content: '/';
+            margin: 0 15px;
+            color: #6666;
+        }
+    }
+   }
+  }
